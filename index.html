@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMA+</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+    body { background: linear-gradient(to right, #dce3f7, #a4c0ec); color: #333; }
+    header {
+      background-color: #0d2f50;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .hero p { font-size: 1.2rem; margin-bottom: 1rem; }
+    .search {
+      text-align: center;
+      margin: 2rem auto;
+    }
+    .search input {
+      padding: 0.8rem;
+      width: 300px;
+      border-radius: 20px;
+      border: none;
+    }
+    .courses {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .course {
+      background: white;
+      padding: 1rem;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .course img {
+      width: 80px;
+      height: 80px;
+    }
+    .course h3 { margin-top: 1rem; font-size: 1.2rem; color: #0d2f50; }
+    .course p { font-size: 0.95rem; margin: 0.5rem 0; }
+    .price { color: #0a7d3b; font-weight: bold; margin-bottom: 0.5rem; }
+    .chat-icon, .whatsapp-icon {
+      position: fixed;
+      bottom: 1rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #0d2f50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .chat-icon { right: 70px; }
+    .whatsapp-icon { right: 10px; background: #25D366; }
+    .popup {
+      position: fixed;
+      bottom: 5rem;
+      right: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      padding: 1rem;
+      display: none;
+    }
+    footer {
+      text-align: center;
+      background: #0d2f50;
+      color: white;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      .courses { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/logo-forma.png" alt="Logo FORMA+">
+    <nav>
+      <a href="#">Início</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Encontre aqui o seu curso livre e mude o seu futuro</h1>
+    <p>🎯 Cursos a partir de R$ 59,90 | 💡 Aulas curtas e práticas | 🏆 Certificado incluso</p>
+  </section>
+
+  <div class="search">
+    <input type="text" placeholder="Buscar curso por nome ou categoria...">
+  </div>
+
+  <section class="courses" id="cursos">
+    <div class="course">
+      <img src="img/curso1.png" alt="Ícone Full Stack">
+      <h3>Programação Full Stack</h3>
+      <p>Frontend e backend do zero ao avançado</p>
+      <p class="price">R$ 89,90</p>
+      <p>Certificado • Gamificação • IA Personalizada</p>
+    </div>
+    <div class="course">
+      <img src="img/curso2.png" alt="Ícone Finanças">
+      <h3>Finanças e Investimentos</h3>
+      <p>Liberdade financeira e renda extra</p>
+      <p class="price">R$ 59,90</p>
+      <p>Certificado • Comunidade ativa</p>
+    </div>
+    <div class="course">
+      <img src="img/curso3.png" alt="Ícone Marketing">
+      <h3>Marketing Digital</h3>
+      <p>Anúncios, estratégias e vendas online</p>
+      <p class="price">R$ 69,90</p>
+      <p>Missões, conquistas e mentoria</p>
+    </div>
+    <div class="course">
+      <img src="img/curso4.png" alt="Ícone UX/UI">
+      <h3>Design UX/UI</h3>
+      <p>Experiências incríveis e interfaces modernas</p>
+      <p class="price">R$ 79,90</p>
+      <p>Projetos práticos + fórum colaborativo</p>
+    </div>
+    <div class="course">
+      <img src="img/curso5.png" alt="Ícone IA">
+      <h3>IA e ChatGPT</h3>
+      <p>IA generativa, automações e produtividade</p>
+      <p class="price">R$ 89,90</p>
+      <p>Inteligência artificial adaptativa</p>
+    </div>
+    <div class="course">
+      <img src="img/curso6.png" alt="Ícone Data Science">
+      <h3>Data Science</h3>
+      <p>Python, SQL, dashboards e análise</p>
+      <p class="price">R$ 99,90</p>
+      <p>Certificado + IA recomendadora</p>
+    </div>
+  </section>
+
+  <div class="popup" id="popup">
+    <p>Quer ajuda? Fale com a gente no chat! 😊</p>
+  </div>
+
+  <div class="chat-icon" onclick="document.getElementById('popup').style.display='block'">💬</div>
+  <div class="whatsapp-icon" onclick="window.location='https://wa.me/5599999999999'">📱</div>
+
+  <footer id="contato">
+    <p>📧 contato@formamais.com.br</p>
+    <p>📷 @formamais.cursos | ☎️ (99) 9999-9999</p>
+    <p>CNPJ: 00.000.000/0001-00</p>
+    <p>&copy; 2025 FORMA+ EAD. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
